@@ -16,6 +16,56 @@
 
 ![img_2.png](pics/img_2.png)
 
+These symbols are Chen’s Entity-Relationship Diagram (ERD) notation used for database design:
+
+    -   Entity (Rectangle): An independent real-world object or concept.
+
+        -   Example: Student, Employee, Course.
+
+    -   Weak Entity (Double Rectangle): An entity that cannot be uniquely identified by its own attributes alone and depends on a strong entity.
+
+        -   Example: Dependent (linked to Employee), Room (linked to Building).
+
+    -   Associative Entity (Diamond inside Rectangle): An entity that links two other entities in a many-to-many relationship and contains its own attributes.
+
+        -   Example: Enrollment (links Student and Course, holding Grade).
+
+    -   Attribute (Oval): A property or characteristic describing an entity.
+
+        -   Example: First Name, Age, Email.
+
+    -   Key Attribute (Underlined Text in Oval): An attribute that uniquely identifies an entity instance (Primary Key).
+
+        -   Example: <u>StudentID</u>, <u>SSN</u>.
+
+    -   Partial Key Attribute (Dashed Underlined Text in Oval): An attribute that uniquely identifies a weak entity only when combined with the key of its parent entity.
+
+        -   Example: <u>DependentName</u> (unique only within a specific employee's family).
+
+    -   Derived Attribute (Dashed Oval): An attribute whose value is calculated from another attribute rather than stored directly.
+
+        -   Example: Age (derived from DateOfBirth).
+
+    -   Multivalued Attribute (Double Oval): An attribute that can hold multiple values for a single entity.
+
+        -   Example: PhoneNumbers, Skills.
+
+    -   Relationship (Diamond): An association or connection between entities.
+
+        -   Example: Teaches (between Professor and Course).
+
+    -   Weak Relationship (Double Diamond): Connects a weak entity to its identifying parent entity.
+
+        -   Example: Has (connects Employee to Dependent).
+
+    -   Mandatory Relationship (Solid Line): Indicates that participation in the relationship is strictly required.
+
+        -   Example: An Order must belong to a Customer.
+
+    -   Optional Relationship (Dashed Line): Indicates that participation in the relationship is optional.
+
+        -   Example: An Employee may be assigned to a Project.
+
 ---
 
 # Notation with Cardinality
