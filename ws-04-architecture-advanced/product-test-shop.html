@@ -1,0 +1,343 @@
+<style>
+.product-container {
+  background: #fff;
+  display: flex;
+  min-width: 240px;
+  padding: 64px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 64px;
+  justify-content: flex-start;
+}
+
+.product-image {
+  aspect-ratio: 1.11;
+  object-fit: contain;
+  width: 100%;
+  align-self: stretch;
+  min-width: 240px;
+  flex: 1;
+  flex-basis: 16px;
+}
+
+.product-details {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  flex-basis: 16px;
+}
+
+.product-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-heading {
+  width: 100%;
+  color: var(--sds-color-text-default-default, #1e1e1e);
+  letter-spacing: -0.48px;
+  font: var(--sds-typography-heading-font-weight, 600) var(--sds-typography-heading-size-base, 24px)/1.2 var(--sds-typography-heading-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.price-container {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.price-tag {
+  align-self: stretch;
+  border-radius: 8px;
+  background: #cff7d3;
+  padding: 8px;
+  color: var(--sds-color-text-positive-on-positive-secondary, #1e1e1e);
+  font: var(--sds-typography-body-font-weight-regular, 400) var(--sds-typography-body-size-medium, 16px) var(--sds-typography-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.price-wrapper {
+  display: flex;
+  margin-top: 4px;
+  align-items: flex-end;
+  font-family: Inter, sans-serif;
+  color: #1e1e1e;
+  font-weight: 700;
+}
+
+.price-amount {
+  display: flex;
+  align-items: flex-start;
+}
+
+.currency {
+  font-size: 24px;
+  letter-spacing: -0.48px;
+}
+
+.amount {
+  font-size: 48px;
+  letter-spacing: -0.96px;
+}
+
+.product-description {
+  flex: 1;
+  margin-top: 16px;
+  width: 100%;
+  color: var(--sds-color-text-default-secondary, #666);
+  font: var(--sds-typography-body-font-weight-regular, 400) var(--sds-typography-body-size-medium, 16px)/1.4 var(--sds-typography-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.form-fields {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  align-items: center;
+  gap: 24px;
+  color: var(--sds-color-text-default-default, #1e1e1e);
+  flex-wrap: wrap;
+  font: var(--sds-typography-body-font-weight-regular, 400) var(--sds-typography-body-size-medium, 16px) var(--sds-typography-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.select-group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  flex-basis: 0;
+}
+
+.select-label {
+  line-height: 1.4;
+}
+
+.select-control {
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  min-width: 240px;
+  margin-top: 8px;
+  min-height: 40px;
+  width: 100%;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.select-value {
+  align-self: stretch;
+  margin: auto 0;
+  flex: 1;
+  flex-basis: 0;
+}
+
+.submit-button {
+  align-self: stretch;
+  border-radius: 8px;
+  background: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  color: var(--sds-color-text-brand-on-brand, #fff);
+  cursor: pointer;
+  font: var(--sds-typography-body-font-weight-regular, 400) var(--sds-typography-body-size-medium, 16px)/1 var(--sds-typography-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.faq-accordion {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 640px;
+  flex-direction: column;
+  color: var(--sds-color-text-default-default, #1e1e1e);
+  font: var(--sds-typography-body-size-medium, 16px) var(--sds-typography-body-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}
+
+.accordion-item {
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  flex-direction: column;
+}
+
+.accordion-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  font-weight: var(--sds-typography-body-font-weight-strong, 600);
+  line-height: 1.4;
+}
+
+.accordion-title {
+  align-self: stretch;
+  margin: auto 0;
+  flex: 1;
+  flex-basis: 0;
+}
+
+.accordion-content {
+  align-self: stretch;
+  flex: 1;
+  margin-top: 8px;
+  width: 100%;
+  font-weight: var(--sds-typography-body-font-weight-regular, 400);
+  line-height: 22px;
+}
+
+.favorite-button {
+  border-radius: 32px;
+  background: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  position: absolute;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .product-container {
+    padding: 20px;
+  }
+  
+  .product-section {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .product-image,
+  .product-details {
+    max-width: 100%;
+  }
+  
+  .form-fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .select-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-container {
+    padding: 16px;
+  }
+  
+  .amount {
+    font-size: 40px;
+  }
+  
+  .form-fields {
+    gap: 12px;
+  }
+  
+  .faq-accordion {
+    max-width: 100%;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+</style>
+
+<div class="product-container">
+  <div class="product-section">
+    <img src="https://placehold.co/504x455/e3e3e3/e3e3e3" alt="Product image" class="product-image">
+    <div class="product-details">
+      <div class="product-content">
+        <div class="product-header">
+          <h1 class="product-heading">Text Heading</h1>
+          <div class="price-container">
+            <div class="price-tag">Tag</div>
+            <div class="price-wrapper">
+              <div class="price-amount">
+                <span class="currency">$</span>
+                <span class="amount">50</span>
+              </div>
+            </div>
+          </div>
+          <p class="product-description">Text</p>
+        </div>
+        
+        <form class="form-fields">
+          <div class="select-group">
+            <label for="select1" class="select-label">Label</label>
+            <select id="select1" class="select-control">
+              <option class="select-value">Value</option>
+            </select>
+          </div>
+          <div class="select-group">
+            <label for="select2" class="select-label">Label</label>
+            <select id="select2" class="select-control">
+              <option class="select-value">Value</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-button">Button</button>
+        </form>
+        
+        <div class="faq-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="true" aria-controls="accordion-content">
+              <span class="accordion-title">Title</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 12.5L10 7.5L5 12.5" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="accordion-content" class="accordion-content">
+              Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="favorite-button" aria-label="Add to favorites">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.3667 3.84166C16.9411 3.41583 16.4357 3.07803 15.8795 2.84757C15.3233 2.6171 14.7271 2.49847 14.1251 2.49847C13.523 2.49847 12.9268 2.6171 12.3706 2.84757C11.8144 3.07803 11.309 3.41583 10.8834 3.84166L10.0001 4.725L9.11673 3.84166C8.25698 2.98192 7.09092 2.49892 5.87506 2.49892C4.6592 2.49892 3.49314 2.98192 2.63339 3.84166C1.77365 4.70141 1.29065 5.86747 1.29065 7.08333C1.29065 8.29919 1.77365 9.46525 2.63339 10.325L10.0001 17.6917L17.3667 10.325C17.7926 9.89937 18.1304 9.39401 18.3608 8.83779C18.5913 8.28158 18.7099 7.6854 18.7099 7.08333C18.7099 6.48126 18.5913 5.88508 18.3608 5.32887C18.1304 4.77265 17.7926 4.26729 17.3667 3.84166Z" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,240 @@
+<style>
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .top-header {
+      background-color: #fff;
+      border-bottom: 1px solid #d9d9d9;
+      display: flex;
+      width: 100%;
+      padding: 32px;
+      align-items: center;
+      gap: 24px;
+      overflow: hidden;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 991px) {
+      .top-header {
+        padding: 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .top-header {
+        padding: 16px;
+      }
+    }
+    .logo-wrapper {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: start;
+      width: 40px;
+      margin: auto 0;
+    }
+    .logo-container {
+      align-self: stretch;
+      display: flex;
+      width: 40px;
+      align-items: center;
+      justify-content: center;
+      margin: auto 0;
+    }
+    .nav-list {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      align-items: start;
+      gap: 8px;
+      color: var(--sds-color-text-default-default);
+      white-space: nowrap;
+      justify-content: end;
+      flex-wrap: wrap;
+      flex: 1;
+      flex-basis: 0%;
+      margin: auto 0;
+      font: 400 16px/1 "Inter", sans-serif;
+    }
+    @media (max-width: 991px) {
+      .nav-list {
+        justify-content: start;
+      }
+    }
+    @media (max-width: 640px) {
+      .nav-list {
+        display: none;
+      }
+    }
+    .nav-item {
+      align-self: stretch;
+      border-radius: 8px;
+      padding: 8px;
+      gap: 8px;
+    }
+    .nav-item-active {
+      background-color: #f5f5f5;
+      color: var(--sds-color-text-brand-on-brand-secondary);
+    }
+    .content-section {
+      background-color: #fff;
+      display: flex;
+      padding: 64px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+    @media (max-width: 991px) {
+      .content-section {
+        padding: 40px 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .content-section {
+        padding: 32px 16px;
+      }
+    }
+    .title-container {
+      display: flex;
+      width: 113px;
+      max-width: 100%;
+      flex-direction: column;
+      text-align: center;
+      line-height: 1.2;
+      justify-content: start;
+    }
+    .main-title {
+      color: var(--sds-color-text-default-default);
+      letter-spacing: -0.48px;
+      font: 600 24px "Inter", sans-serif;
+    }
+    .subtitle {
+      color: var(--sds-color-text-default-secondary);
+      margin-top: 8px;
+      font: 500 20px "Inter", sans-serif;
+    }
+    .accordion-container {
+      display: flex;
+      margin-top: 48px;
+      width: 640px;
+      max-width: 640px;
+      flex-direction: column;
+      color: var(--sds-color-text-default-default);
+      justify-content: start;
+      font: 16px "Inter", sans-serif;
+    }
+    @media (max-width: 991px) {
+      .accordion-container {
+        width: 100%;
+      }
+    }
+    @media (max-width: 640px) {
+      .accordion-container {
+        margin-top: 32px;
+      }
+    }
+    .accordion-item {
+      border-radius: 8px;
+      background-color: #fff;
+      border: 1px solid #d9d9d9;
+      display: flex;
+      width: 100%;
+      padding: 16px;
+      flex-direction: column;
+      justify-content: start;
+    }
+    @media (max-width: 640px) {
+      .accordion-item {
+        padding: 12px;
+      }
+    }
+    .accordion-header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      line-height: 1.4;
+      justify-content: space-between;
+    }
+    .accordion-title {
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .accordion-content {
+      align-self: stretch;
+      flex: 1;
+      display: flex;
+      margin-top: 8px;
+      width: 100%;
+      align-items: flex-start;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .comment-item {
+      align-self: stretch;
+      flex: 1;
+      min-width: 240px;
+      width: 100%;
+      gap: 8px;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+      border: 1px solid #d9d9d9;
+      margin-top: 16px;
+      padding: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    @media (max-width: 640px) {
+      .comment-item {
+        padding: 12px;
+      }
+    }
+</style>
+
+<div class="main-container">
+    <header class="top-header">
+        <div class="logo-wrapper">
+            <div class="logo-container">
+                <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Company Logo">
+                    <path d="M20 2H14.1666C12.6195 2 11.1358 2.61458 10.0419 3.70854C8.94789 4.80251 8.33331 6.28624 8.33331 7.83333C8.33331 9.38043 8.94789 10.8642 10.0419 11.9581C11.1358 13.0521 12.6195 13.6667 14.1666 13.6667M20 2V13.6667M20 2H25.8333C26.5994 2 27.3579 2.15088 28.0656 2.44404C28.7734 2.73719 29.4164 3.16687 29.9581 3.70854C30.4998 4.25022 30.9295 4.89328 31.2226 5.60101C31.5158 6.30875 31.6666 7.06729 31.6666 7.83333C31.6666 8.59938 31.5158 9.35792 31.2226 10.0657C30.9295 10.7734 30.4998 11.4164 29.9581 11.9581C29.4164 12.4998 28.7734 12.9295 28.0656 13.2226C27.3579 13.5158 26.5994 13.6667 25.8333 13.6667M20 13.6667H14.1666M20 13.6667H25.8333M20 13.6667V25.3333M14.1666 13.6667C12.6195 13.6667 11.1358 14.2812 10.0419 15.3752C8.94789 16.4692 8.33331 17.9529 8.33331 19.5C8.33331 21.0471 8.94789 22.5308 10.0419 23.6248C11.1358 24.7188 12.6195 25.3333 14.1666 25.3333M25.8333 13.6667C25.0673 13.6667 24.3087 13.8175 23.601 14.1107C22.8933 14.4039 22.2502 14.8335 21.7085 15.3752C21.1668 15.9169 20.7372 16.5599 20.444 17.2677C20.1509 17.9754 20 18.734 20 19.5C20 20.266 20.1509 21.0246 20.444 21.7323C20.7372 22.4401 21.1668 23.0831 21.7085 23.6248C22.2502 24.1665 22.8933 24.5961 23.601 24.8893C24.3087 25.1824 25.0673 25.3333 25.8333 25.3333C26.5994 25.3333 27.3579 25.1824 28.0656 24.8893C28.7734 24.5961 29.4164 24.1665 29.9581 23.6248C30.4998 23.0831 30.9295 22.4401 31.2226 21.7323C31.5158 21.0246 31.6666 20.266 31.6666 19.5C31.6666 18.734 31.5158 17.9754 31.2226 17.2677C30.9295 16.5599 30.4998 15.9169 29.9581 15.3752C29.4164 14.8335 28.7734 14.4039 28.0656 14.1107C27.3579 13.8175 26.5994 13.6667 25.8333 13.6667ZM14.1666 25.3333C12.6195 25.3333 11.1358 25.9479 10.0419 27.0419C8.94789 28.1358 8.33331 29.6196 8.33331 31.1667C8.33331 32.7138 8.94789 34.1975 10.0419 35.2915C11.1358 36.3854 12.6195 37 14.1666 37C15.7137 37 17.1975 36.3854 18.2914 35.2915C19.3854 34.1975 20 32.7138 20 31.1667V25.3333M14.1666 25.3333H20" stroke="#1E1E1E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+        </div>
+        <nav class="nav-list" role="navigation">
+            <a href="#products" class="nav-item nav-item-active" tabindex="0">Products</a>
+            <a href="#solutions" class="nav-item" tabindex="0">Solutions</a>
+            <a href="#community" class="nav-item" tabindex="0">Community</a>
+            <a href="#resources" class="nav-item" tabindex="0">Resources</a>
+            <a href="#pricing" class="nav-item" tabindex="0">Pricing</a>
+            <a href="#contact" class="nav-item" tabindex="0">Contact</a>
+        </nav>
+    </header>
+    <main class="content-section">
+        <div class="title-container">
+            <h1 class="main-title">Quote 1</h1>
+            <p class="subtitle">Subheading</p>
+        </div>
+        <div class="accordion-container">
+            <div class="accordion-item" role="button" tabindex="0">
+                <div class="accordion-header">
+                    <span class="accordion-title">Milinda (Designer)</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M15 12.5L10 7.5L5 12.5" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <span>MY opinion on this is the following:</span>
+                    <br />
+                    <span>...</span>
+                </div>
+            </div>
+            <div class="comment-item" role="button" tabindex="0">Comment 1</div>
+            <div class="comment-item" role="button" tabindex="0">Comment 2</div>
+            <div class="comment-item" role="button" tabindex="0">Comment 3</div>
+            <div class="comment-item" role="button" tabindex="0">Comment 4</div>
+        </div>
+    </main>
+</div>
