@@ -5,7 +5,7 @@
 3. Database-design task results should be located in `dbld` folder, and user-interface-design task files in `uid`
 4. Final repo structure example:
 ```
-wdwj-arch-adv-amet_azizov
+wdwj-arch-adv-corey_taylor
 |---dbld
     |---diagram.(png\jpg\etc.)
     |---readme.md
@@ -21,8 +21,8 @@ where:
 - `dbld\diagram.png` - erd schema
 - `dbld\readme.md` - notes\descriptions
 - `uid\static` - a folder where html and related files are located (html, js, css)
-- `uid\readme.md` -  a file where the description, goals, link to prototype, etc. are specified
-- `uid\mockup.pdf` - file with visual format of your mockup (so all the webpages as pictures are collected in one file)
+- `uid\readme.md` -  a file where clarification notes or descriptions, goals, link to prototype, link to static (if you stored it somewhere), link to builder.io generated project (if builder.io is used) etc. are stored
+- `uid\mockup.pdf` - file with visual format of your mockup: all webpages (maybe as pictures) are collected in one file
 5. Use link to the repository to submit practical task result in learning platform.
 6. DO NOT MISS TERMS
 
