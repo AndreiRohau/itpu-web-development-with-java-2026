@@ -60,7 +60,7 @@ where:
 
 ![img_6.png](img%2Fimg_6.png)
 
-10. Search for `builder.io` pluging
+10. Search for `builder.io` pluging (opt: Figroot Plugin | native figma <dev> with MCP mode)
 
 ![img_7.png](img%2Fimg_7.png)
 
