@@ -1,6 +1,6 @@
 # Architecture Advanced Practical task solution format
 
-1. Create a repository with name format: `wdwj-arch-adv-{name_surname}` - for ex.: `wdwj-arch-adv-amet_azizov`.
+1. Create a repository with name format: `wdwj-arch-adv-{name_surname}` - for ex.: `wdwj-arch-adv-corey_taylor` (wdwj stands for web-dev-with-java).
 2. Create to folders: `uid`, `dbld` - referring to user-interface-design and database-layer-design tasks accordingly
 3. Database-design task results should be located in `dbld` folder, and user-interface-design task files in `uid`
 4. Final repo structure example:
