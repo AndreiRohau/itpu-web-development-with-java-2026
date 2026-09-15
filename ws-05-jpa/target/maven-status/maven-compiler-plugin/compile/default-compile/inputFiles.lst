@@ -1,0 +1,17 @@
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/Main.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/Main_1.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/Main_2.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/Main_3.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/ActiveEmployee.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/Company.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/Employee.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/EmployeeProfile.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/EmployeeProfileCompositePrimaryKey.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/RetiredEmployee.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/entity/Salary.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/CompanyRepository.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/CompanyRepositoryImpl.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/EmployeeRepository.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/EmployeeRepositoryImpl.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/SalaryRepository.java
+/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-05-jpa/src/main/java/com/arohau/jpa/repository/SalaryRepositoryImpl.java

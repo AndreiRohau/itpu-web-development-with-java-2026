@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "main.java.com.arohau.jpa.Main"
+        },
+        {
+            "type": "java",
+            "name": "Main_2",
+            "request": "launch",
+            "mainClass": "com.arohau.jpa.Main_2"
+        }
+    ]
+}
