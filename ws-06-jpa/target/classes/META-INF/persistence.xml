@@ -1,0 +1,44 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+<persistence-unit
+        name="default"
+        transaction-type="RESOURCE_LOCAL"
+>
+    <!-- Entity classes go here -->
+    <class>com.arohau.jpa.entity.Employee</class>
+    <class>com.arohau.jpa.entity.Company</class>
+    <class>com.arohau.jpa.entity.Salary</class>
+    <class>com.arohau.jpa.entity.EmployeeProfile</class>
+    <class>com.arohau.jpa.entity.ActiveEmployee</class>
+    <class>com.arohau.jpa.entity.RetiredEmployee</class>
+
+    <properties>
+<!--        <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>-->
+<!--        <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>-->
+<!--        <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>-->
+<!--        <property name="jakarta.persistence.jdbc.user" value="newuser"/>-->
+<!--        <property name="jakarta.persistence.jdbc.password" value="password"/>-->
+
+        <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+<!--        <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:mydatabasemem"/>-->
+        <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:file:~/mydatabasefile;MODE=MySQL"/>
+        <property name="jakarta.persistence.jdbc.user" value="sa"/>
+        <property name="jakarta.persistence.jdbc.password" value="password"/>
+
+        <property name="hibernate.jdbc.time_zone" value="UTC"/>
+        <property name="hibernate.format_sql" value="true"/>
+<!--        <property name="hibernate.show_sql" value="true"/>-->
+
+        <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+<!--        <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+<!--        <property name="hibernate.hbm2ddl.auto" value="update"/>-->
+<!--        <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+<!--        <property name="jakarta.persistence.sql-load-script-source" value="data.sql"/>-->
+
+    </properties>
+</persistence-unit>
+</persistence>
