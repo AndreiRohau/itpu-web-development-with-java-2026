@@ -7,10 +7,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@RequiredArgsConstructor
+@Data // lombok
+@NoArgsConstructor // lombok
+@AllArgsConstructor // lombok
+@RequiredArgsConstructor // lombok
 @Entity
 @Table(name = "employees")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
