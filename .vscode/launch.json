@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main_5",
+            "request": "launch",
+            "mainClass": "com.arohau.jpa.Main_5",
+            "projectName": "ws-06-jpa"
+        },
+        {
+            "type": "java",
+            "name": "Main_4",
+            "request": "launch",
+            "mainClass": "com.arohau.jpa.Main_4",
+            "projectName": "ws-06-jpa"
+        },
+        {
+            "type": "java",
+            "name": "Main_3",
+            "request": "launch",
+            "mainClass": "com.arohau.jpa.Main_3",
+            "projectName": "ws-05-jpa"
+        },
+        {
+            "type": "java",
             "name": "Main_1",
             "request": "launch",
             "mainClass": "com.arohau.jpa.Main_1",
