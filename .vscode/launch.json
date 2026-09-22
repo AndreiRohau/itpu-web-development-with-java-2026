@@ -2,6 +2,40 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainSimple",
+            "request": "launch",
+            "mainClass": "com.arohau.hibernate.MainSimple",
+            "projectName": "ws-08-hibernate"
+        },
+        {
+            "type": "java",
+            "name": "Main_4",
+            "request": "launch",
+            "mainClass": "com.arohau.hibernate.Main_4"
+        },
+        {
+            "type": "java",
+            "name": "ws-08 Main",
+            "request": "launch",
+            "mainClass": "com.arohau.hibernate.Main",
+            "projectName": "ws-08-hibernate"
+        },
+        {
+            "type": "java",
+            "name": "ws-07 Main_4",
+            "request": "launch",
+            "mainClass": "com.arohau.hibernate.Main_4",
+            "projectName": "ws-07-hibernate"
+        },
+        {
+            "type": "java",
+            "name": "ws-07 Main_5",
+            "request": "launch",
+            "mainClass": "com.arohau.hibernate.Main_5",
+            "projectName": "ws-07-hibernate"
+        },
+        {
+            "type": "java",
             "name": "Main_5",
             "request": "launch",
             "mainClass": "com.arohau.jpa.Main_5",

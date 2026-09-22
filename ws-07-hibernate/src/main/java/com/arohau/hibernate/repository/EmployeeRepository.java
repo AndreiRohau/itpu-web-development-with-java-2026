@@ -1,6 +1,6 @@
-package com.arohau.jpa.repository;
+package com.arohau.hibernate.repository;
 
-import com.arohau.jpa.entity.Employee;
+import com.arohau.hibernate.entity.Employee;
 
 import java.util.List;
 import java.util.Optional;

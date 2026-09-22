@@ -1,7 +1,7 @@
-package com.arohau.jpa;
+package com.arohau.hibernate;
 
-import com.arohau.jpa.entity.*;
-import com.arohau.jpa.repository.EmployeeRepositoryImpl;
+import com.arohau.hibernate.entity.*;
+import com.arohau.hibernate.repository.EmployeeRepositoryImpl;
 import jakarta.persistence.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

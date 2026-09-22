@@ -29,11 +29,11 @@
 
         <!-- Mapping files -->
         <!-- Add your entity classes here -->
-        <mapping class="com.arohau.jpa.entity.Employee"/>
-        <mapping class="com.arohau.jpa.entity.ActiveEmployee"/>
-        <mapping class="com.arohau.jpa.entity.RetiredEmployee"/>
-        <mapping class="com.arohau.jpa.entity.EmployeeProfile"/>
-        <mapping class="com.arohau.jpa.entity.Company"/>
-        <mapping class="com.arohau.jpa.entity.Salary"/>
+        <mapping class="com.arohau.hibernate.entity.Employee"/>
+        <mapping class="com.arohau.hibernate.entity.ActiveEmployee"/>
+        <mapping class="com.arohau.hibernate.entity.RetiredEmployee"/>
+        <mapping class="com.arohau.hibernate.entity.EmployeeProfile"/>
+        <mapping class="com.arohau.hibernate.entity.Company"/>
+        <mapping class="com.arohau.hibernate.entity.Salary"/>
     </session-factory>
 </hibernate-configuration>

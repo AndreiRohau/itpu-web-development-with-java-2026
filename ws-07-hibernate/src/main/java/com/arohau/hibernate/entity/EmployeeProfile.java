@@ -1,4 +1,4 @@
-package com.arohau.jpa.entity;
+package com.arohau.hibernate.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
