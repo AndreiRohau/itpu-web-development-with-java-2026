@@ -2,6 +2,45 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainExecs",
+            "request": "launch",
+            "mainClass": "com.arohau.http.MainExecs",
+            "projectName": "ws-09-http"
+        },
+        {
+            "type": "java",
+            "name": "MainAuth",
+            "request": "launch",
+            "mainClass": "com.arohau.http.MainAuth",
+            "projectName": "ws-09-http"
+        },
+        {
+            "type": "java",
+            "name": "MainAsync",
+            "request": "launch",
+            "mainClass": "com.arohau.http.MainAsync",
+            "projectName": "ws-09-http"
+        },
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "com.arohau.http.Example"
+        },
+        {
+            "type": "java",
+            "name": "MainCookies",
+            "request": "launch",
+            "mainClass": "com.arohau.http.MainCookies"
+        },
+        {
+            "type": "java",
+            "name": "MainPushPromise",
+            "request": "launch",
+            "mainClass": "com.arohau.http.MainPushPromise"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.arohau.http.Main"
