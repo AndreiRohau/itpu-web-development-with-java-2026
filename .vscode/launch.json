@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GreetClient",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.GreetClient",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "GreetServer",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.GreetServer",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
             "name": "MultiMain",
             "request": "launch",
             "mainClass": "com.arohau.sockets.MultiMain",

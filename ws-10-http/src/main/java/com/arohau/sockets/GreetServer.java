@@ -20,6 +20,7 @@ public class GreetServer {
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         String greeting = in.readLine();
+        System.out.println("ON SERVER SIDE -> CLIENT: " + greeting);
         if ("hello server".equals(greeting)) {
             out.println("hello client");
         } else {

@@ -5,7 +5,7 @@ public class ControllerV2 {
 
     // DoctorController.java
 
-    // GET my-app.com/doctor/{doctor_name/id}
+    // GET my-app.com/doctor/{doctor_name/id}?param1=value1&param2=value2
     public Object getData(Object request) {
         Object response = new Object();
         return response;
@@ -29,7 +29,7 @@ public class ControllerV2 {
         return response;
     }
 
-    // delete my-app.com/doctor/{doctor_name/id}
+    // DELETE my-app.com/doctor/{doctor_name/id}
     public Object deleteData(Object request) {
         Object response = new Object();
         return response;

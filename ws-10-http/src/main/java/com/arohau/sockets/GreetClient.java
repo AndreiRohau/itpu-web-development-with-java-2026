@@ -32,8 +32,8 @@ public class GreetClient {
     public static void main(String[] args) throws IOException {
         GreetClient client = new GreetClient();
         client.startConnection("127.0.0.1", 6666);
-        String response = client.sendMessage("hello server");
-        System.out.println("hello client == " + response);
+        String response = client.sendMessage("hello server!");
+        System.out.println("ON CLIENT SIDE -> SERVER: " + response);
         client.stopConnection();
     }
 }

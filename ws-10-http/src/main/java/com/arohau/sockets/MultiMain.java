@@ -8,7 +8,7 @@ public class MultiMain {
     public static void main(String[] args) throws IOException {
         client_1();
         client_2();
-        // client_stop_server_request();
+        client_stop_server_request();
     }
 
     private static void client_1() throws IOException {

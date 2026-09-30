@@ -63,7 +63,7 @@ public class EchoMultiServer {
                         out.println("bye");
                         break;
                     }
-                    out.println(inputLine);
+                    out.println(inputLine.toUpperCase());
                 }
 
                 in.close();
