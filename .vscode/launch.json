@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MultiMain",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.MultiMain",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "EchoMultiServer",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.EchoMultiServer",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "EchoClient",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.EchoClient",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "EchoServer",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.EchoServer",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "ExampleClient",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.ExampleClient",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "ExampleServer",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.ExampleServer",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "com.arohau.sockets.Example",
+            "projectName": "ws-10-http"
+        },
+        {
+            "type": "java",
             "name": "MainExecs",
             "request": "launch",
             "mainClass": "com.arohau.http.MainExecs",

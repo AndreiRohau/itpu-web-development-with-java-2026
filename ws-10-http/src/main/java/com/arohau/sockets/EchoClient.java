@@ -18,6 +18,7 @@ public class EchoClient {
     }
 
     public String sendMessage(String msg) throws IOException {
+        System.out.println("(CLIENT SIDE) CLIENT: " + msg);
         out.println(msg);
         String resp = in.readLine();
         return resp;
@@ -34,14 +35,17 @@ public class EchoClient {
         client.startConnection("127.0.0.1", 4444);
 
         String resp1 = client.sendMessage("hello");
-        String resp2 = client.sendMessage("world");
-        String resp3 = client.sendMessage("!");
-        String resp4 = client.sendMessage(".");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp1);
 
-        System.out.println("hello == " + resp1);
-        System.out.println("world == " + resp2);
-        System.out.println("! == " + resp3);
-        System.out.println("good bye == " + resp4);
+        String resp2 = client.sendMessage("world");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp2);
+
+        String resp3 = client.sendMessage("!");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp3);
+        
+        String resp4 = client.sendMessage(".");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp4);
+
 
         client.stopConnection();
     }

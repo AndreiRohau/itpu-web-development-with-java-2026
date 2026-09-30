@@ -8,31 +8,29 @@ public class MultiMain {
     public static void main(String[] args) throws IOException {
         client_1();
         client_2();
-        client_stop_server_request();
+        // client_stop_server_request();
     }
 
     private static void client_1() throws IOException {
         EchoClient client1 = new EchoClient();
         client1.startConnection("127.0.0.1", 4444);
-        String msg1 = client1.sendMessage("hello");
-        String msg2 = client1.sendMessage("world");
-        String terminate = client1.sendMessage(".");
+        
+        String resp1 = client1.sendMessage("hello");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp1);
 
-        System.out.println(msg1 + " == hello");
-        System.out.println(msg2 + " == world");
-        System.out.println(terminate + " == bye");
+        String resp2 = client1.sendMessage("world");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp2);
+
+        String resp3 = client1.sendMessage("!");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp3);
+        
+        String resp4 = client1.sendMessage(".");
+        System.out.println("(CLIENT SIDE) SERVER: " + resp4);
     }
 
     private static void client_2() throws IOException {
         EchoClient client2 = new EchoClient();
         client2.startConnection("127.0.0.1", 4444);
-        String msg1 = client2.sendMessage("hello");
-        String msg2 = client2.sendMessage("world");
-        String terminate = client2.sendMessage(".");
-
-        System.out.println(msg1 + " == hello");
-        System.out.println(msg2 + " == world");
-        System.out.println(terminate + " == bye");
     }
 
     private static void client_stop_server_request() throws IOException {

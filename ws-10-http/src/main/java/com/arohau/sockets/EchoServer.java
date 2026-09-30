@@ -22,8 +22,9 @@ public class EchoServer {
 
         String inputLine;
         while ((inputLine = in.readLine()) != null) {
+            System.out.println("(SERVER SIDE) CLIENT: " + inputLine);
             if (".".equals(inputLine)) {
-                out.println("good bye");
+                out.println("bye client");
                 break;
             }
             out.println(inputLine.toUpperCase());
@@ -31,6 +32,7 @@ public class EchoServer {
     }
 
     public void stop() throws IOException {
+        System.out.println("Stopping server...");
         in.close();
         out.close();
         clientSocket.close();

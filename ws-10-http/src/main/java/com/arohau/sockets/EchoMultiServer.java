@@ -20,11 +20,13 @@ public class EchoMultiServer {
 
     public void start(int port) throws IOException {
         serverSocket = new ServerSocket(port);
+        int id = 0;
         while (serverSocket != null) {
-            System.out.println("1");
+            System.out.println("SERVER: Listening for the socket.");
             Socket clientSocket = serverSocket.accept();
-            new EchoClientHandler(clientSocket).start();
-            System.out.println("2");
+            id++;
+            new EchoClientHandler(id, clientSocket).start();
+            System.out.println("SERVER: Started processing socket connection in separate with thread id = " + id);
         }
     }
 
@@ -33,11 +35,13 @@ public class EchoMultiServer {
     }
 
     private static class EchoClientHandler extends Thread {
+        private int id;
         private Socket clientSocket;
         private PrintWriter out;
         private BufferedReader in;
 
-        public EchoClientHandler(Socket socket) {
+        public EchoClientHandler(int id, Socket socket) {
+            this.id = id;
             this.clientSocket = socket;
         }
 
@@ -48,9 +52,10 @@ public class EchoMultiServer {
 
                 String inputLine;
                 while ((inputLine = in.readLine()) != null) {
+                    System.out.println("(SERVER SIDE " + id + ") CLIENT: " + inputLine);
                     if (STOP_SERVER.equals(inputLine)) {
-                        out.println("STOPPING_SERVER");
-                        closingServerSocket = serverSocket;
+                        out.println("STOPPING_SERVER: id=" + id);
+                        closingServerSocket = serverSocket; // never let proceed WHILE in start()
                         serverSocket = null;
                         break;
                     }
@@ -64,7 +69,7 @@ public class EchoMultiServer {
                 in.close();
                 out.close();
                 clientSocket.close();
-                System.out.println("Processed");
+                System.out.println("SERVER (" + id + "): Processed and closed socket session.");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
