@@ -6,6 +6,9 @@
         <title>ws-11</title>
     </head>
     <body>
+        <form action="FrontController" method="get">
+            <button type="submit">Go to home page</button>
+        </form>
         <h2>Hello World! index</h2>
         <br/>
 
