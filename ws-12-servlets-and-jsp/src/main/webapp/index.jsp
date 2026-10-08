@@ -22,6 +22,9 @@ printerTmp(now.toString());
 <br/>
 
 <!-- Talk about scopes in next workshop -->
+<p>Message from server: operation = ${param.operation}</p>
+<p>Message from server: operation = <%= request.getParameter("operation") %></p>
+
 <p>Message from server: ${requestScope.result}</p>
 
 <p>Message from server: <%=request.getAttribute("result")%></p>
