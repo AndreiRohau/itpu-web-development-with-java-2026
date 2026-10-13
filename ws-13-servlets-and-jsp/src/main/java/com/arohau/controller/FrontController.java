@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 //@WebServlet("/fc")
 public class FrontController extends HttpServlet {
     public static final Logger LOGGER = Logger.getLogger(FrontController.class.getName());
+    public static final Map<String, String> initParamsMap = new HashMap<>();
     public static final String
             COMMAND = "command",
             OPERATION = "operation",
@@ -48,6 +49,7 @@ public class FrontController extends HttpServlet {
             String nextParameterName = iterator.next();
             String initParameter = config.getInitParameter(nextParameterName);
             System.out.println(nextParameterName + " = " + initParameter);
+            initParamsMap.put(nextParameterName, initParameter);
         }
 
         System.out.println("config: " + config);
@@ -60,6 +62,9 @@ public class FrontController extends HttpServlet {
     }
 
     private void doExec(HttpServletRequest req, HttpServletResponse resp) {
+        // System.out.println("=".repeat(10));
+        // System.out.println(initParamsMap.toString());
+        // System.out.println("=".repeat(10));
         readCookies(req, resp);
         try {
             final String operation = req.getParameter(OPERATION);
