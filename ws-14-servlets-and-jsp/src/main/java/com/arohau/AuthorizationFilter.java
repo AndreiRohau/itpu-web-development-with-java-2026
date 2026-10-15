@@ -32,7 +32,7 @@ public class AuthorizationFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-
+		System.out.println("---> doFilter() STARTS");
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
 
@@ -52,13 +52,17 @@ public class AuthorizationFilter implements Filter {
 				commandName.matches("changeLanguage") ||
 				commandName.matches("goToPage") ||
 				(availableRoleCommands != null && availableRoleCommands.contains(commandName))) {
-
+			
+			System.out.println("---> doFilter() MATCHED");
 			chain.doFilter(request, response);
 		} else if (hasSomeCondition()) {
+			System.out.println("---> doFilter() hasSomeCondition()");
 			res.sendError(403);
 		} else {
+			System.out.println("---> doFilter() SEND_REDIRECT");
 			res.sendRedirect("index.jsp");
 		}
+		System.out.println("---> doFilter() EDNS");
 	}
 
 	private static boolean hasSomeCondition() {

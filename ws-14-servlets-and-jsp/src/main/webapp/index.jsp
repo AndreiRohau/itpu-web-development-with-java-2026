@@ -11,11 +11,11 @@
 
 <p>1. ${requestScope.name1} </p>
 <p>2. ${requestScope.greeting} </p>
-<p>3. ${requestScope.param.name1} </p>
+<p>3. ${param.name1} </p>
 
 <p>1. ${requestScope.name2} </p>
 <p>2. ${requestScope.greeting} </p>
-<p>3. ${requestScope.param.name2} </p>
+<p>3. ${param.name2} </p>
 
 <form method="get" action="commandHandler">
 	<input type="hidden" name="command" value="getGreeting" />

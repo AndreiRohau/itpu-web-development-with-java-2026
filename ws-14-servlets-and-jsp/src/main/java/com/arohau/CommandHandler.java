@@ -18,7 +18,8 @@ public class CommandHandler extends HttpServlet {
 	private static final String NAME_2 = "name2";
 	private static final String LOGIN_COMMAND = "login";
 	private static final String LOGOUT_COMMAND = "logout";
-	private static final String GREETING_COMMAND = "getGreeting";
+	private static final String GET_GREETING_COMMAND = "getGreeting";
+	private static final String POST_GREETING_COMMAND = "postGreeting";
 
 	private static final String RESULT_PAGE = "/WEB-INF/jsp/result.jsp";
 
@@ -26,6 +27,7 @@ public class CommandHandler extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name = req.getParameter(NAME_1);
 		req.setAttribute("greeting", "Hello " + name);
+		req.getSession(true).setAttribute(USER_ROLE_ATTRIBUTE_NAME, "user");
 		req.getRequestDispatcher("index.jsp").forward(req, resp);
 	}
 
@@ -34,8 +36,11 @@ public class CommandHandler extends HttpServlet {
 			throws ServletException, IOException {
 
 		String command = request.getParameter(COMMAND_PARAMETER_NAME);
-		request.setAttribute(USER_ROLE_ATTRIBUTE_NAME, request.getSession().getAttribute(USER_ROLE_ATTRIBUTE_NAME));
+		// request.setAttribute(USER_ROLE_ATTRIBUTE_NAME, request.getSession().getAttribute(USER_ROLE_ATTRIBUTE_NAME));
 		request.setAttribute(COMMAND_PARAMETER_NAME, command);
+
+		System.out.println(USER_ROLE_ATTRIBUTE_NAME + " " + request.getAttribute(USER_ROLE_ATTRIBUTE_NAME));
+		System.out.println(COMMAND_PARAMETER_NAME + " " + request.getAttribute(COMMAND_PARAMETER_NAME));
 
 		handleCommand(command, request);
 
@@ -50,18 +55,21 @@ public class CommandHandler extends HttpServlet {
 			case LOGOUT_COMMAND:
 				handleLogout(request);
 				break;
-			case GREETING_COMMAND:
-				sendServerMessage(request);
+			case GET_GREETING_COMMAND:
+				sendServerMessage(request, GET_GREETING_COMMAND);
+				break;
+			case POST_GREETING_COMMAND:
+				sendServerMessage(request, POST_GREETING_COMMAND);
 				break;
 			default:
 				System.out.println("Nothing to do with that");
 			}
 	}
 
-	private void sendServerMessage(HttpServletRequest request) {
+	private void sendServerMessage(HttpServletRequest request, String command_name) {
 		String nameParam = request.getParameter(NAME_2);
-		request.setAttribute(USER_ROLE_ATTRIBUTE_NAME, request.getSession().getAttribute(USER_ROLE_ATTRIBUTE_NAME));
-		request.setAttribute(COMMAND_PARAMETER_NAME, GREETING_COMMAND);
+		// request.setAttribute(USER_ROLE_ATTRIBUTE_NAME, request.getSession().getAttribute(USER_ROLE_ATTRIBUTE_NAME));
+		request.setAttribute(COMMAND_PARAMETER_NAME, command_name);
 	}
 
 	private void handleLogout(HttpServletRequest request) {

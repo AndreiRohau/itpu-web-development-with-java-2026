@@ -195,6 +195,14 @@
             "name": "Main_2",
             "request": "launch",
             "mainClass": "com.arohau.jpa.Main_2"
+        },
+        {
+            "type": "java",
+            "name": "Attach to Tomcat (ws-14)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,
+            "projectName": "ws-14-servlets-and-jsp"
         }
     ]
 }

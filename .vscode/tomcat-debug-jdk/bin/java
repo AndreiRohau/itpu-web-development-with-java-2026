@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+if [ -n "${JAVA_HOME:-}" ] && [ -x "$JAVA_HOME/bin/java" ]; then
+    real_java="$JAVA_HOME/bin/java"
+elif [ -x /usr/libexec/java_home ]; then
+    java_home=$(/usr/libexec/java_home)
+    real_java="$java_home/bin/java"
+elif command -v java >/dev/null 2>&1; then
+    real_java=$(command -v java)
+else
+    echo "No Java executable found. Set JAVA_HOME or add java to PATH." >&2
+    exit 1
+fi
+
+previous=
+last=
+for argument do
+    previous=$last
+    last=$argument
+done
+
+if [ "$previous" = "org.apache.catalina.startup.Bootstrap" ] && [ "$last" = "start" ]; then
+    exec "$real_java" '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:5005' "$@"
+fi
+
+exec "$real_java" "$@"
