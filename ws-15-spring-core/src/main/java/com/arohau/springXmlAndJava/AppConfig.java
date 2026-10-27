@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
     @Bean
-    public UserService userServiceImpl(UserDao userDao) { // update here
-        return new UserServiceImpl(userDao);
+    public UserService userServiceImpl(UserDao userDaoV2Impl) { // update here
+        return new UserServiceImpl(userDaoV2Impl);
     }
 
     @Bean

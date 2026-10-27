@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Component
-//@Primary // required to avoid NoUniqueBeanDefinitionException and set this bean as primary
+// @Primary //@Primary // required to avoid NoUniqueBeanDefinitionException and set this bean as primary
 public class UserDaoImpl implements UserDao {
 
     private static final Map<Long, User> usersDb = new HashMap<>();

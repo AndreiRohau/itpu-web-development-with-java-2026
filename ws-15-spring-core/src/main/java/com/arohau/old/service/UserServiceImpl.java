@@ -1,6 +1,7 @@
 package com.arohau.old.service;
 
 import com.arohau.old.dao.UserDao;
+import com.arohau.old.dao.UserDaoImpl;
 import com.arohau.old.dao.UserDaoV2Impl;
 import com.arohau.old.domain.User;
 

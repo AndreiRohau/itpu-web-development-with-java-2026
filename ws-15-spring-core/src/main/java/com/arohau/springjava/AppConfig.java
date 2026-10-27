@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Bean;
 
 public class AppConfig {
     @Bean
-    public UserService userServiceImpl(UserDao userDaoImpl) {
-        return new UserServiceImpl(userDaoImpl);
+    public UserService userServiceImpl(UserDao userDaoV2Impl) {
+        return new UserServiceImpl(userDaoV2Impl);
     }
 
     @Bean

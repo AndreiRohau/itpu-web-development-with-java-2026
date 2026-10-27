@@ -5,9 +5,9 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="userServiceImpl" class="com.arohau.springxml.service.UserServiceImpl">
-        <!-- <constructor-arg ref="userDaoV2Impl"/> -->
+        <constructor-arg ref="userDaoImpl"/>
         <!-- when you do not pass dependencies in constructor, but have setter methods: use <property/> -->
-       <property name="userDao" ref="userDaoImpl"/>
+       <!-- <property name="userDao" ref="userDaoImpl"/> -->
     </bean>
 
     <bean id="userDaoImpl" class="com.arohau.springxml.dao.UserDaoImpl">
