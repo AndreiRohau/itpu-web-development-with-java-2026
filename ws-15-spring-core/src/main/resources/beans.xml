@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userServiceImpl" class="com.arohau.springxml.service.UserServiceImpl">
+        <!-- <constructor-arg ref="userDaoV2Impl"/> -->
+        <!-- when you do not pass dependencies in constructor, but have setter methods: use <property/> -->
+       <property name="userDao" ref="userDaoImpl"/>
+    </bean>
+
+    <bean id="userDaoImpl" class="com.arohau.springxml.dao.UserDaoImpl">
+    </bean>
+
+    <bean id="userDaoV2Impl" class="com.arohau.springxml.dao.UserDaoV2Impl">
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
