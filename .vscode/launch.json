@@ -5,6 +5,20 @@
             "name": "SpringSpecificsMain",
             "request": "launch",
             "mainClass": "com.arohau.springspecifics.SpringSpecificsMain",
+            "projectName": "ws-16-spring-core"
+        },
+        {
+            "type": "java",
+            "name": "MusicServiceMain",
+            "request": "launch",
+            "mainClass": "com.arohau.optional.musicservice.MusicServiceMain",
+            "projectName": "ws-16-spring-core"
+        },
+        {
+            "type": "java",
+            "name": "SpringSpecificsMain",
+            "request": "launch",
+            "mainClass": "com.arohau.springspecifics.SpringSpecificsMain",
             "projectName": "ws-15-spring-core"
         },
         {

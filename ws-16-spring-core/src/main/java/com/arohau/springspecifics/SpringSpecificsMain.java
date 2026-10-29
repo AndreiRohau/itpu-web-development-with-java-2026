@@ -48,20 +48,20 @@ public class SpringSpecificsMain {
         Object customBean2b = context.getBean("customBeanTwo");
 
         if (SpringSpecificsMain.class.isAnnotationPresent(Configuration.class)) {
-            System.out.println("SpringSpecificsMain.class annotated with @Configuration");
-            System.out.println("customBean is the SAME as customBeanTwo");
             assert customBean1a == customBean1b;
             assert customBean2a == customBean2b;
-
+            
             assert customBean1b == customBean2a;
+            System.out.println("customBean is the SAME as customBeanTwo");
+            System.out.println("SpringSpecificsMain.class annotated with @Configuration");
 
         } else if (SpringSpecificsMain.class.isAnnotationPresent(Component.class)) {
-            System.out.println("SpringSpecificsMain.class annotated with @Component");
-            System.out.println("customBean is NOT the SAME as customBeanTwo");
             assert customBean1a == customBean1b;
             assert customBean2a == customBean2b;
-
+            
             assert customBean1b != customBean2a;
+            System.out.println("customBean is NOT the SAME as customBeanTwo");
+            System.out.println("SpringSpecificsMain.class annotated with @Component");
         }
         System.out.println();
     }
