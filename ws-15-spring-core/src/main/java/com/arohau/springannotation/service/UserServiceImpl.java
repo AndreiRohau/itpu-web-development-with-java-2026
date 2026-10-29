@@ -21,13 +21,14 @@ import static java.util.Objects.isNull;
 @Component
 public class UserServiceImpl implements UserService {
 
-    // @Autowired 
+    @Autowired 
+    // // @Qualifier("userDaoV2Impl")
     private UserDao userDao;
 
     // constructor #1
     // @Autowired
-    // public UserServiceImpl(UserDao userDaoImpl) {
-    //     this.userDao = userDaoImpl;
+    // public UserServiceImpl(UserDao userDao) {
+    //     this.userDao = userDao;
     // }
 
     // constructor #2

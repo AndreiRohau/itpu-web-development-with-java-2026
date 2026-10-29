@@ -3,12 +3,15 @@ package com.arohau.springspecifics;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Scope;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class DetectorBean implements InitializingBean, DisposableBean, ApplicationContextAware, BeanFactoryAware, BeanNameAware {
 
     @Value("${my.custom.prop.1}")
@@ -52,8 +55,8 @@ public class DetectorBean implements InitializingBean, DisposableBean, Applicati
         printPropsIfSet();
     }
 
-    public void customInit() {
-        System.out.println("step-6 - customInit");
+    public void myCustomInit() {
+        System.out.println("step-6 - myCustomInit");
         printPropsIfSet();
     }
 
@@ -76,14 +79,17 @@ public class DetectorBean implements InitializingBean, DisposableBean, Applicati
         printPropsIfSet();
     }
 
-    public void customDestroy() {
-        System.out.println("step-destroy-3 - customDestroy()");
+    public void myCustomDestroy() {
+        System.out.println("step-destroy-3 - myCustomDestroy()");
         printPropsIfSet();
     }
 
     private void printPropsIfSet() {
         if (propVal1 != null) {
-            System.out.println("pros are set");
+            System.out.println("pros are set" + 
+                " propVal1 = " + propVal1 +
+                " propVal2 = " + propVal2
+            );
         } else {
             System.out.println("NO PROPS YET");
         }

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 
 @Configuration
-//@Component
+// @Component
 
 @ComponentScan("com.arohau.springspecifics")
 @PropertySource("classpath:/application.properties")
@@ -17,16 +17,19 @@ public class SpringSpecificsMain {
         if (DetectorBean.class.isAnnotationPresent(Scope.class)
                 && DetectorBean.class.getAnnotation(Scope.class).value().equalsIgnoreCase("singleton")) {
             assert detectorBean == detectorBeanSame;
+            System.out.println("DetectorBean is a singleton");
         } else if (DetectorBean.class.isAnnotationPresent(Scope.class)
                 && DetectorBean.class.getAnnotation(Scope.class).value().equalsIgnoreCase("prototype")) {
             assert detectorBean != detectorBeanSame;
+            System.out.println("DetectorBean is a prototype");
         }
         System.out.println("--------------------------------------------------------------");
 
         detectorBean.detect();
 
-
+        System.out.println("=".repeat(30));
         configurationVsComponent(context);
+        System.out.println("=".repeat(30));
 
         System.out.println("--------------------------------------------------------------");
 
@@ -35,7 +38,7 @@ public class SpringSpecificsMain {
         context.close();
     }
 
-    @Bean(initMethod="customInit", destroyMethod="customDestroy")
+    @Bean(initMethod="myCustomInit", destroyMethod="myCustomDestroy")
     public DetectorBean detectorBean() {
         return new DetectorBean();
     }

@@ -1,6 +1,7 @@
 package com.arohau.springannotation.dao;
 
 import com.arohau.springannotation.domain.User;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
