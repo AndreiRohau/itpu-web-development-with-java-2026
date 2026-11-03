@@ -1,6 +1,19 @@
 # spring-mvc
 
 ##
+FrontController servlet
+DispatcherServlet
+Webmvc
+viewresolver
+appInitializer
+webappcontext
+
+
+model
+template resolution
+controller methods
+
+##
 
 - Install JDK 21, Maven, and Tomcat 10.1 (Servlet 6 compatible).
 - In VS Code, install Extension Pack for Java and Tomcat.
