@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+</head>
+<body>
+<form action="/ws-18/register" method="POST" th:object="${user}">
+<!--    <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>-->
+
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <p style="color:red;" th:if="${#fields.hasErrors('name')}"  th:errors="*{name}">Description errors</p>
+        <input id="name" class="form-control" type="text" required="" th:field="*{name}"/><br/>
+    </div>
+    <div class="form-group">
+        <label for="login">Login: </label>
+        <p style="color:red;" th:if="${#fields.hasErrors('login')}"  th:errors="*{login}">Description errors</p>
+        <input id="login" class="form-control" type="text" required="" th:field="*{login}"/><br/>
+    </div>
+    <div class="form-group">
+        <label for="password1">Password 1: </label>
+        <p style="color:red;" th:if="${#fields.hasErrors('password1')}"  th:errors="*{password1}">Description errors</p>
+        <input id="password1" class="form-control" type="text" required="" th:field="*{password1}"/><br/>
+    </div>
+    <div class="form-group">
+        <label for="password2">Password 2: </label>
+        <p style="color:red;" th:if="${#fields.hasErrors('password2')}"  th:errors="*{password2}">Description errors</p>
+        <input id="password2" class="form-control" type="text" required="" th:field="*{password2}"/><br/>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <ul style="list-style-type: none">-->
+<!--            &lt;!&ndash;/*@thymesVar id="gender" type="by.ras.entity.Gender"*/&ndash;&gt;-->
+<!--            <li th:each="gender : ${genders}">-->
+<!--                <input title="" type="radio" required="" th:value="${sex}" th:field="*{sex}"/>-->
+<!--                <span th:text="${#strings.capitalize(#strings.toLowerCase(gender))}">Each type</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <ul style="list-style-type: none">-->
+<!--            &lt;!&ndash;/*@thymesVar id="occupations" type="by.ras.entity.Occupation"*/&ndash;&gt;-->
+<!--            <li th:each="occupation : ${occupations}">-->
+<!--                <input title="" type="radio"  required="" th:value="${occupation}" th:field="*{occupation}"/>-->
+<!--                <p th:if="${#fields.hasErrors('occupation')}"  th:errors="*{occupation}">Description errors</p>-->
+<!--                <span th:text="${#strings.capitalize(#strings.toLowerCase(occupation))}">Each type</span>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+    <button type="submit" class="btn btn-default">Save user</button>
+</form>
+</body>
+</html>

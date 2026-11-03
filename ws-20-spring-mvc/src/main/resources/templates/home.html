@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<h1><span th:text="${serverMessage}"></span></h1>
+<hr/>
+<h1>Welcome, <span th:text="${user.name}">User</span>!</h1>
+<h1>Server time, <span th:text="${serverTime}">User</span>!</h1>
+
+<a href="user/registration">Register user</a>
+
+<form action="user" method="GET">
+    <input id="userId" class="form-control" type="text" required="" name="userId" value="1"/>
+    <button type="submit">Submit</button>
+</form>
+<form action="user" method="GET">
+    <input id="userLogin" class="form-control" type="text" required="" name="userLogin" value="default"/>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
