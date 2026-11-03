@@ -39,8 +39,9 @@ public class HomeController {
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String user(@Validated User user, Model model) {
-		System.out.println("User Page Requested");
+		System.out.println("User Page Requested !@!@!");
+		System.out.println("user = " + user);
 		model.addAttribute("userName", user.getUserName());
-		return "user";
+		return "home";
 	}
 }

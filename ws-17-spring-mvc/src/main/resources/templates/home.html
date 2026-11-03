@@ -5,5 +5,10 @@
 </head>
 <body>
 <h1>Welcome, <span th:text="${username}">User</span>!</h1>
+
+<span th:if="${userName}">
+    <p>Another Welcome, <span th:text="${userName}">User!</p>
+</span>
+
 </body>
 </html>
