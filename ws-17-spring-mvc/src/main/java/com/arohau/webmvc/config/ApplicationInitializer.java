@@ -18,6 +18,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
 
+        System.out.println("version 8");
         System.out.println("http://localhost:8080/ws-17-spring-mvc/home");
     }
 }

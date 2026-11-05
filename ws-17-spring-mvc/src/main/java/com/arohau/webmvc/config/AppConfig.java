@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.spring6.view.ThymeleafViewResolver;
@@ -14,6 +15,21 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 @ComponentScan(basePackages = "com.arohau.webmvc")
 @EnableWebMvc
 public class AppConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        // Maps the root URL ("/") directly to the "index" view template
+        // registry.addViewController("/").setViewName("index");
+
+        // Maps "/about" directly to an "about" view template
+        registry.addViewController("/about").setViewName("about");
+
+        // Maps a URL to a redirect status code (e.g., redirecting legacy paths)
+        registry.addRedirectViewController("/old", "/new");
+        
+        registry.addViewController("/old").setViewName("old");
+        registry.addViewController("/new").setViewName("new");
+    }
 
     @Bean
     public ITemplateResolver templateResolver() {
