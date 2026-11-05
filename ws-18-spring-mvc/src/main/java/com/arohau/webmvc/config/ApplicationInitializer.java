@@ -18,7 +18,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
 
-        System.out.println("http://localhost:8080/ws-18/home");
-        System.out.println("http://localhost:8080/ws-18/register");
+        System.out.println("http://localhost:8080/ws-18-spring-mvc/home");
+        System.out.println("http://localhost:8080/ws-18-spring-mvc/register");
     }
 }
