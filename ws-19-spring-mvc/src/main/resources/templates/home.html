@@ -8,7 +8,9 @@
 <hr/>
 <h1>Welcome, <span th:text="${username}">User</span>!</h1>
 <h1>Server time, <span th:text="${serverTime}">User</span>!</h1>
+<br/>
 <a href="user/registration">Register user</a>
+<br/>
 <form action="user/" method="GET">
     <input id="userId" class="form-control" type="text" required="" name="userId" value="1"/>
     <button type="submit">Submit</button>

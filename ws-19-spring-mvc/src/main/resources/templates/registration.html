@@ -28,12 +28,12 @@
     <div class="form-group">
         <label for="password1">Password 1: </label>
         <p style="color:red;" th:if="${#fields.hasErrors('password1')}"  th:errors="*{password1}">Description errors</p>
-        <input id="password1" class="form-control" type="text" required="" th:field="*{password1}"/><br/>
+        <input id="password1" class="form-control" type="password" required="" th:field="*{password1}"/><br/>
     </div>
     <div class="form-group">
         <label for="password2">Password 2: </label>
         <p style="color:red;" th:if="${#fields.hasErrors('password2')}"  th:errors="*{password2}">Description errors</p>
-        <input id="password2" class="form-control" type="text" required="" th:field="*{password2}"/><br/>
+        <input id="password2" class="form-control" type="password" required="" th:field="*{password2}"/><br/>
     </div>
 <!--    <div class="form-group">-->
 <!--        <ul style="list-style-type: none">-->

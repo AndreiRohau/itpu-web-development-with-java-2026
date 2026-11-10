@@ -7,9 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
-
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -23,13 +20,6 @@ public class UserController {
     public String registration(Model model) {
         System.out.println("UserController GET /registration");
         System.out.println(model);
-        User user = (User) model.getAttribute("user");
-        if (nonNull(user)) {
-            user.setName("DefaultName");
-            user.setLogin("qwe");
-            user.setPassword1("1234");
-            user.setPassword2("1234");
-        }
         return "registration";
     }
 
@@ -40,8 +30,14 @@ public class UserController {
         System.out.println(user);
         System.out.println(bindingResult);
         System.out.println(model);
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
         System.out.println("...saving user...");
-        model.addAttribute("serverMessage", "New User, with name" + user.getName() + " saved successfully");
+        
+        // ... PROCESSING creation of a new user here, by calling service ...
+
+        model.addAttribute("serverMessage", "New User, with name " + user.getName() + " saved successfully");
         return "home";
     }
 
@@ -51,6 +47,9 @@ public class UserController {
         System.out.println("userId = " + userId);
         System.out.println("model = " + model);
         System.out.println("... gettting user by user id");
+        // getting user from database by id
+        User user = new User(11L, "Bill", "Lee", null, null);
+        model.addAttribute("user", user);
         return "user";
     }
 
