@@ -18,7 +18,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(com.arohau.webmvc.model.User data) {
         // check login does not exist (unique login)
+        User foundUser = userRepository.findByLogin(data.getLogin());
+        assert foundUser == null;
         // check passwords equals
+        assert data.getPassword1().equals(data.getPassword2());
+
         User user = prepareUserEntity(data);
         return userRepository.save(user);
     }
@@ -39,6 +43,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserByLogin(String login) {
         // check login is nonNull or nonBlanc
+        assert (login != null && login != "");
+        
         return userRepository.findByLogin(login);
     }
 

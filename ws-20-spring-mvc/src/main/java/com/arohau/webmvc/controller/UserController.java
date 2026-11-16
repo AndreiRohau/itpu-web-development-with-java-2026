@@ -24,22 +24,22 @@ public class UserController {
         return new User();
     }
 
-//    @GetMapping
-//    public String getUserById(@RequestParam(name = "userId") Long userId, Model model) {
-//        System.out.println("UserController GET /");
-//        System.out.println("userId = " + userId);
-//        System.out.println("model = " + model);
-//        System.out.println("... gettting user by user id");
-//        return "user";
-//    }
-
     @GetMapping
-    public String getUserByLogin(@RequestParam(name = "userLogin") String login, Model model) {
+    public String getUserByLogin(@RequestParam(name = "userId", required = false) Long userId, 
+                                 @RequestParam(name = "userLogin", required = false) String login, 
+                                 Model model) {
         System.out.println("UserController GET /");
         System.out.println("login = " + login);
+       System.out.println("userId = " + userId);
         System.out.println("model = " + model);
-        com.arohau.webmvc.entity.User userByLogin = userService.getUserByLogin(login);
-        model.addAttribute("user", userByLogin);
+        com.arohau.webmvc.entity.User foundUser = null;
+        if (userId != null) {
+            foundUser = userService.getUserById(Long.valueOf(login));
+        } else if (login != null) {
+            foundUser = userService.getUserByLogin(login);
+        }
+        
+        model.addAttribute("user", foundUser);
         return "user";
     }
 
