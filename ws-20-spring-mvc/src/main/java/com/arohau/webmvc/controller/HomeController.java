@@ -60,7 +60,7 @@ public class HomeController {
 	@ExceptionHandler(ArithmeticException.class)
 	public String handleArithmeticException(Model model) {
 		System.out.println("ArithmeticException handled");
-		model.addAttribute("msg", "ArithmeticException");
+		model.addAttribute("msg", "ArithmeticException HAPPENED!!!!");
 		return "error";
 	}
 }

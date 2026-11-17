@@ -9,7 +9,7 @@ public class LocalControllerAdvice {
     @ExceptionHandler(NullPointerException.class)
     public String handleNullPointerException(Model model) {
         System.out.println("NullPointerException handled");
-        model.addAttribute("msg", "NullPointerException");
+        model.addAttribute("msg", "NullPointerException HAPPENED!!!!");
         return "error";
     }
 }

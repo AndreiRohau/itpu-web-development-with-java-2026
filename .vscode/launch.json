@@ -2,6 +2,26 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e1.Application"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e1.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.arohau.e.Main",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
             "name": "SpringSpecificsMain",
             "request": "launch",
             "mainClass": "com.arohau.springspecifics.SpringSpecificsMain",
