@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Application",
             "request": "launch",
+            "mainClass": "com.arohau.e2.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
             "mainClass": "com.arohau.e1.Application"
         },
         {
