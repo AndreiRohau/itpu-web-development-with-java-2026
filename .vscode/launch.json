@@ -2,6 +2,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.arohau.qq2.App",
+            "projectName": "ws-22-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.arohau.qq1.App",
+            "projectName": "ws-22-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.arohau.qq0.App",
+            "projectName": "ws-22-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e7.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e6.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e5.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e4.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "com.arohau.e3.Application",
+            "projectName": "ws-21-spring-aop"
+        },
+        {
+            "type": "java",
             "name": "Application",
             "request": "launch",
             "mainClass": "com.arohau.e2.Application",

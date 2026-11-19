@@ -13,6 +13,10 @@ public class Application {
 
         LogicV7 logic = context.getBean(LogicV7.class);
 
+        // aspect around is working
         logic.combineValues("asd", 123);
+        // aspect around is working
+        
+        // normal execution
     }
 }
