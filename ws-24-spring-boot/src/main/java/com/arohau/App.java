@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
         System.out.println("app sout");
-        System.out.println("http://localhost:8080/actuator/beans");
+        System.out.println("http://localhost:8080/custom-actuator/beans");
         System.out.println("Now Ctrl + F in browser: com.arohau");
         System.out.println("Notice 3 beans: app; higherLevelService_1; backupService_1");
     }
@@ -24,17 +24,17 @@ public class App {
     @Bean
     @ConditionalOnClass(name = "com.arohau.App")
     public String higherLevelService_1() {
-        return "HigherLevelService_1 bean created because 'com.arohau.App' is present.";
+        return "HigherLevelService_1 bean CREATED because 'com.arohau.App' is present.";
     }
 
     /**
-     * This bean will only be created if the class "com.arohau.App" is present in the application's classpath.
+     * This bean will only be created if the class "com.arohau.SomeMissingClass" is present in the application's classpath.
      * SO THE BEAN IS WILL NOT BE CREATED IN THIS EXAMPLE
      */
     @Bean
     @ConditionalOnClass(name = "com.arohau.SomeMissingClass")
     public String higherLevelService_2() {
-        return "HigherLevelService_2 bean created because 'com.arohau.App' is present.";
+        return "HigherLevelService_2 bean was NOT created because 'com.arohau.SomeMissingClass' is missing.";
     }
 
     /**
@@ -45,17 +45,17 @@ public class App {
     @Bean
     @ConditionalOnMissingClass("com.arohau.SomeMissingClass")
     public String backupService_1() {
-        return "BackupService_1 bean created because 'com.arohau.SomeMissingClass' is missing.";
+        return "BackupService_1 bean CREATED because 'com.arohau.SomeMissingClass' is missing.";
     }
 
     /**
-     * This bean will only be created if the class "com.arohau.SomeMissingClass"
+     * This bean will only be created if the class "com.arohau.App"
      * is NOT present in the application's classpath.
      * SO THE BEAN IS WILL NOT BE CREATED IN THIS EXAMPLE
      */
     @Bean
     @ConditionalOnMissingClass("com.arohau.App")
     public String backupService_2() {
-        return "BackupService_2 bean created because 'com.arohau.SomeMissingClass' is missing.";
+        return "BackupService_2 bean was NOT created because 'com.arohau.App' is present.";
     }
 }
