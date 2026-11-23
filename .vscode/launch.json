@@ -4,6 +4,12 @@
             "type": "java",
             "name": "App",
             "request": "launch",
+            "mainClass": "com.arohau.App"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
             "mainClass": "com.arohau.qq2.App",
             "projectName": "ws-22-spring-aop"
         },
