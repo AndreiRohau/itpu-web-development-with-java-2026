@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.epam.edu</groupId>
-    <artifactId>ws-28-spring-boot</artifactId>
+    <artifactId>ws-23-spring-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>spring-boot-basics</name>
