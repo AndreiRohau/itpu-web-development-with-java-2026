@@ -14,7 +14,8 @@ public class SpringBootBasicsApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext run = SpringApplication.run(SpringBootBasicsApplication.class, args);
 
-		SomeService bean = run.getBean("someService", SomeService.class);
+		SomeService bean = run.getBean(SomeService.class);
+		System.out.println("Using singleton: " + bean);
 
 		final String someText = "HeLLo EveRYbODy";
 
@@ -33,7 +34,9 @@ public class SpringBootBasicsApplication {
 	@Bean
 	@Scope("prototype")
 	public SomeService someServicePrototype() {
-		return new SomeServiceImpl();
+		SomeService someServicePrototype = new SomeServiceImpl();
+		System.out.println("Created prototype: " + someServicePrototype);
+		return someServicePrototype;
 	}
 
 

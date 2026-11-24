@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringBootBasicsApplication",
+            "request": "launch",
+            "mainClass": "com.arohau.edu.SpringBootBasicsApplication",
+            "projectName": "ws-23-spring-boot"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "com.arohau.App"

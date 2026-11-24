@@ -15,11 +15,11 @@ public class FrontController {
 
     @GetMapping("/upper/{text}")
     public ResponseEntity<String> getUppercase(@PathVariable String text) {
-        return ResponseEntity.ok().body(someService.textToUppercase(text));
+        return ResponseEntity.ok().body(someService + " : " + someService.textToUppercase(text));
     }
 
     @GetMapping("/lower/{text}")
     public ResponseEntity<String> getLowercase(@PathVariable String text) {
-        return ResponseEntity.ok().body(someService.textToLowercase(text));
+        return ResponseEntity.ok().body(someService + " : " + someService.textToLowercase(text));
     }
 }
