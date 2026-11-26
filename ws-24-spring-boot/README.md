@@ -37,3 +37,9 @@ WHERE u.username = 'qwer'
 ```
 
 The existing Actuator settings and conditional bean examples in this project remain in place.
+
+Open these URLs in the same browser session:
+- /custom-actuator/health — application health
+- /custom-actuator/info — the info.app.* values from [application.properties](/Users/Andrei_Rohau/repository/itpu/2026/itpu-web-development-with-java-2026/ws-24-spring-boot/src/main/resources/application.properties)
+- /custom-actuator/beans — registered Spring beans
+- /custom-actuator/metrics — available metrics; try /custom-actuator/metrics/jvm.memory.used
