@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin area</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Role protected page</p>
+    <h1>Admin example</h1>
+    <p class="muted">Spring Security only allows accounts with ROLE_ADMIN to open this page.</p>
+    <p><a th:href="@{/home}">Back to your account</a></p>
+</main>
+</body>
+</html>

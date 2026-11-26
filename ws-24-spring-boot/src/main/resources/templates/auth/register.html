@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create account</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Spring Boot auth example</p>
+    <h1>Create your account</h1>
+    <p class="muted">Your account is stored in the local H2 database.</p>
+
+    <form th:action="@{/register}" th:object="${registrationForm}" method="post">
+        <label for="username">Username</label>
+        <input id="username" th:field="*{username}" autocomplete="username" required>
+        <small class="field-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></small>
+
+        <label for="email">Email</label>
+        <input id="email" th:field="*{email}" type="email" autocomplete="email" required>
+        <small class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+
+        <label for="password">Password</label>
+        <input id="password" th:field="*{password}" type="password" autocomplete="new-password" required>
+        <small class="hint">Use at least 8 characters.</small>
+        <small class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></small>
+
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" th:field="*{confirmPassword}" type="password" autocomplete="new-password" required>
+        <small class="field-error" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></small>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p class="form-footer">Already have an account? <a th:href="@{/login}">Sign in</a></p>
+</main>
+</body>
+</html>

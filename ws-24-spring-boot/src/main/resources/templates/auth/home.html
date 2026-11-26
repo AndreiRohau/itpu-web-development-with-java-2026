@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your account</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Authenticated area</p>
+    <h1 th:text="|Hello, ${username}!|">Hello!</h1>
+    <p class="muted">You are signed in. Your assigned roles are:</p>
+    <ul class="role-list">
+        <li th:each="role : ${roles}" th:text="${role}">ROLE_USER</li>
+    </ul>
+
+    <p class="muted">This page is protected by Spring Security. Account credentials and roles are loaded from H2.</p>
+    <p><a th:href="@{/admin}">Open the admin example</a> <span class="hint">(requires ROLE_ADMIN)</span></p>
+
+    <form th:action="@{/logout}" method="post">
+        <button class="secondary" type="submit">Sign out</button>
+    </form>
+</main>
+</body>
+</html>
